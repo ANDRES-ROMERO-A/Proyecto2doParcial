@@ -1,0 +1,48 @@
+--INSERTAR ROLES
+insert into rol(descripcion,esActivo) values
+('Administrador',1),
+('Empleado',1)
+
+go
+
+--INSERTAR USUARIOS
+insert into usuario(nombreApellidos,correo,idRol,Clave,esActivo) values
+('Steward Morales','admin@example.com',1,'12345',1),
+('Andres Romero','employe@example.com',2,'12345',1)
+
+go
+--INSERTAR CATEGORIAS
+insert into Categoria(descripcion,esActivo) values ('Armazones de recetas',1)
+insert into Categoria(descripcion,esActivo) values ('Lentes de Sol',1)
+insert into Categoria(descripcion,esActivo) values ('Lentes de Conctaco',1)
+insert into Categoria(descripcion,esActivo) values ('Lentes Deportivos',1)
+insert into Categoria(descripcion,esActivo) values ('Medicamentos',1)
+insert into Categoria(descripcion,esActivo) values ('Accesorios',1)
+
+go
+
+--INSERTAR PRODUCTOS
+
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Armazon Ray-Ban 3648V/2509',1,20,$47,1),
+('Armazon Ray-Ban 6589250356',1,30,$60,1),
+('Armazon RALPH 7110/5777',1,30,$34,1),
+('Armazon DOLCE 3258/3091',1,30,$68,1),
+('Anteojos Rusty Strateg C5',2,25,$26,1),
+('Anteojos Ray-Ban 3025/w3275',2,15,$73,1),
+('Anteojos Julius JSGM26/SS',2,10,$42,1),
+('Lentes de contacto Dailies',3,10,$5,1),
+('Lentes de contacto Hidrogel',3,10,$20,1),
+('Lentes de Conctacto Metacrilato',3,10,$30,1),
+('Lentes deportivos NIKE',4,15,$200,1),
+('Lentes deportivos Adidas',4,20,$300,1),
+('Lentes deportivos Oakley',4,25,$400,1),
+('Tobramicina',5,10,$30,1),
+('Nafazolina',5,10,$20,1),
+('Liquido para limpiar',6,20,$35,1),
+('Estuche',6,15,$40,1)
+
+go
+
+--INSERTAR NUMERO VENTA INICIAL
+insert into NumeroDocumento(ultimo_Numero) values(0)
